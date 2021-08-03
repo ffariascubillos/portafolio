@@ -1,0 +1,5 @@
+# Atajos para html5   
+
+.contenido>.caja*2>h1+p
+
+meta:vp  = Genera el meta viewport para responsive design

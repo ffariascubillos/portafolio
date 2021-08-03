@@ -1,0 +1,152 @@
+:root {
+    --orange1: #f2511b;
+    --azul-oscuro: #0b5394;
+    --azul-medio: rgb(61, 133, 198);
+    --dark-night: #0000008a;
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Colores */
+    .bg-azul-oscuro {
+        background-color: var(--azul-oscuro);
+    }
+    .bg-azul-medio {
+        background-color: var(--azul-medio);
+    }
+    .bg-dark-night {
+        background-color: var(--dark-night);
+    }
+/* Fin colores */
+
+/* FULL IMG */
+
+.full-img {
+    width: 100%;
+    display: block;
+    filter: grayscale(65%);
+}
+
+.mascara {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* MENÚ */
+
+header {
+    position: fixed;
+    background-color: #000000;
+    padding: 7px;
+    width: 100%;
+    z-index: 1;
+}
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+        li {
+            display: inline-block;
+            padding: 7px;
+        }
+
+            li a {
+                display: block;
+                color: #fff;
+                padding: 7px;
+                text-decoration: none;
+            }
+
+/* FIN MENÚ */
+
+
+.wrapper {
+    position: relative;
+}
+
+.f-raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* fonts sizes */
+
+.fw-lg { font-weight: lighter; }
+.fw-400 { font-weight: 400; }
+
+/* fin fonts sizes */
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 34px;
+    padding: 25px;
+    margin: 0 0 50px;
+}
+
+p {
+    font-size: 22px;
+}
+
+.tx-center { text-align: center; }
+
+/* Colores */
+
+.text-orange1 { color: var(--orange1) }
+.text-white { color: #fff; }
+
+/* fin colores */
+
+
+/* backgrounds */
+
+.bg-orange1 { background-color: var(--orange1) }
+
+/* fin backgrounds */
+
+section {
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Elementos */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+/* Fin elementos */
+
+/* MARGINS */
+
+.mt-1 { margin-top: 10px; }
+.mb-0 { margin-bottom: 0; }
+
+/* END MARGINS */
+
+/* Padding */
+
+.pt-250 { padding-top: 250px; } 
+
+/* fin Padding */
+
+footer {
+    padding: 100px 0 300px;
+    text-align: center;
+}
