@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca UNIACC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Plugins -->
+    <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lightgallery.css" />
+    <!-- lightgallery plugins -->
+    <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-zoom.css" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/justifiedGallery.css" />
+    <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-thumbnail.css" />
+</head>
+<body>
+    <!-- Loader -->
+    <!-- <div class="loader">
+        <div class="container h-100">
+            <div class="table-100">
+                <div class="table-cell-100">
+                    <div class="mt-3">
+                        <img class="logo-md" src="assets/images/loader2.gif" alt="loader">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- fin loader -->
+    <header
+    data-aos="fade-down"
+    data-aos-duration="1000">
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </header>
+    <div class="wrapper">
+        <section id="home" class="pt-150">
+            <div class="container">
+                <div class="">
+                    <h1 class="text-dark my-0 f-raleway"
+                    data-aos="fade-down"
+                    data-aos-duration="1000">Biblioteca UNIACC</h1>
+                    <p class="mb-0 mt-1 text-dark"
+                    data-aos="fade-down"
+                    data-aos-duration="1500">Desarrollo sitio Web Corporativo</p>
+                    <h4 class="mb-2 mt-1"
+                    data-aos="fade-down"
+                    data-aos-duration="1500">PHP - HTML5 - CSS - JavaScript - MySQL - WordPress</h4>
+                </div>  
+                <!-- Galería -->
+                <div class="gallery-container" id="animated-thumbnails-gallery">
+                    <a data-lg-size="1875-941" class="Biblioteca uniacc desktop" data-src="../assets/images/proyectos/biblioteca-uniacc/biblioteca-uniacc.png" data-sub-html="<h4><a target='_blank' href='https://biblioteca.uniacc.cl' >Ver sitio web</a></h4><p>  HTML5, CSS, PHP, JavaScript</p>">
+                      <img class="img-responsive" src="../assets/images/proyectos/biblioteca-uniacc/biblioteca-uniacc.png" />
+                    </a>
+                    <a data-lg-size="388-838" class="Biblioteca uniacc desktop" data-src="../assets/images/proyectos/biblioteca-uniacc/biblioteca-uniacc-mob.png" data-sub-html="<h4><a target='_blank' href='https://biblioteca.uniacc.cl' >Ver sitio web</a></h4><p>  HTML5, CSS, PHP, JavaScript</p>">
+                      <img class="img-responsive" src="../assets/images/proyectos/biblioteca-uniacc/biblioteca-uniacc-mob.png" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <footer id="contacto" class="bg-dark-night">
+            <div class="container">
+                <div class="col"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+                    <h2 class="f-raleway text-white">Contacto</h2>
+                    <p class="text-white"><a class="text-white" href="mailto:ffariascubillos@gmail.com">ffariascubillos@gmail.com</a></p>        
+                    <p class="mb-0 mt-1 text-white">Santiago de Chile</p>
+                </div> 
+            </div>
+        </footer>
+    </div>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <!-- librerias -->
+    <!-- Or use the minified version -->
+    <script src="../node_modules/lightgallery/lightgallery.min.js"></script>
+    <!-- lightgallery plugins -->
+    <script src="../node_modules/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="../assets/js/jquery.justifiedGallery.js"></script>
+    <!-- scripts -->
+    <script>
+    jQuery("#animated-thumbnails-gallery")
+    .justifiedGallery({
+        captions: false,
+        rowHeight: 180,
+        margins: 25,
+        lastRow: 'center'
+    })
+    .on("jg.complete", function () {
+        window.lightGallery(
+        document.getElementById("animated-thumbnails-gallery"),
+        {
+            autoplayFirstVideo: false,
+            pager: false,
+            galleryId: "nature",
+            plugins: [lgZoom, lgThumbnail],
+            mobileSettings: {
+                controls: false,
+                showCloseIcon: false,
+                download: false,
+                rotate: false
+            }
+        }
+        );
+    });
+    </script>
+</body>
+</html>
