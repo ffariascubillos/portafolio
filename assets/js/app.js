@@ -16,3 +16,34 @@ $('li a').on('click', function(){   // Agrega class active al tag <a>.
 var url = window.location.href
 console.log('la url actual es: ' + url)
 
+//hamburguesadoble
+$('.hamburguer').on('click', function(){
+    //opacity
+    $('.shadow').toggleClass('shadow__invoke')
+    $(this).toggleClass('cerrar_hamburg')
+    $('.menu').toggleClass('menu_on')
+    //comportamiento hamburguesa.
+    $('.pan').toggleClass('pan_ok')
+    $('.lechuga').toggleClass('lechuga_ok')
+    $('.queso').toggleClass('queso_ok')
+})
+$('.menu a').on('click', function(){
+    //opacity
+    $('.shadow').toggleClass('shadow__invoke')
+    $('.hamburguer').toggleClass('cerrar_hamburg')
+    $('.menu').toggleClass('menu_on')
+    //comportamiento hamburguesa.
+    $('.pan').toggleClass('pan_ok')
+    $('.lechuga').toggleClass('lechuga_ok')
+    $('.queso').toggleClass('queso_ok')
+})
+$('.shadow').on('click', function(){
+    //opacity
+    $(this).toggleClass('shadow__invoke')
+    $('.hamburguer').toggleClass('cerrar_hamburg')
+    $('.menu').toggleClass('menu_on')
+    //comportamiento hamburguesa.
+    $('.pan').toggleClass('pan_ok')
+    $('.lechuga').toggleClass('lechuga_ok')
+    $('.queso').toggleClass('queso_ok')
+})

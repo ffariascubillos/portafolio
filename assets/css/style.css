@@ -71,7 +71,7 @@ header {
     background-color: #000000;
     padding: 7px;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
     ul {
@@ -114,6 +114,69 @@ header {
                 .active::before {
                     width: 100%;
                 }
+
+.hamburguer {
+    cursor: pointer;
+    display: none;
+    background: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 20px;
+    padding: 6px;
+}
+    .hamburguer div {
+        background-color: #000;
+        height: 3px;
+        margin-top: 3px;
+        transition: ease-out .3s;
+        -webkit-transition: ease-out .3s;
+        -moz-transition: ease-out .3s;
+        transform: rotate(0) translate(0, 0);
+        opacity: 1;
+    }
+        div.pan_ok {
+            transform: rotate(-40deg) translate(-5px, 4px);
+        }
+        div.lechuga_ok {
+            transform: translate(-12px, 0px);
+            opacity: 0;
+        }
+        div.queso_ok {
+            transform: rotate(40deg) translate(-5px, -4px);
+        }
+        .hamburguer::before {
+            color: #fff;
+            font-size: 13px;
+            content: 'Menú';
+            position: absolute;
+            top: 10px;
+            right: -42px;
+            transition: ease-out .3s;
+            -webkit-transition: ease-out .3s;
+            -moz-transition: ease-out .3s;
+        }
+        .cerrar_hamburg::before {
+            content: 'Cerrar';
+        }
+
+.shadow {
+    display: none;
+    background-color: #000000b3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transform-origin: right;
+    transform: scale(0,1);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) .1s;
+    -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1) .1s;
+    -moz-transition: cubic-bezier(0.4, 0, 0.2, 1) .1s;
+}
+    .shadow__invoke { transform: scale(1,1); }
 
 /* FIN MENÚ */
 
@@ -169,7 +232,7 @@ p {
 
 section {
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 10px;
 }
 
 /* Elementos */
@@ -235,7 +298,10 @@ section {
     box-sizing: border-box;
     transition: ease-in-out .5s;
     position: relative;
+    margin: 10px;
+    padding: 5px;
 }
+
     .proyecto:hover {
         background-color: #6b6b6b8e;
     }
@@ -244,7 +310,7 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto); /*auto es el alto de la caja*/
-    grid-gap: 1rem; /*margen de separación entre cajas*/
+    grid-gap: 0; /*margen de separación entre cajas*/
 }
 
 .container-grid-2 {
@@ -309,4 +375,63 @@ section {
 footer {
     padding: 100px 0 300px;
     text-align: center;
+}
+
+
+/* media queries */
+
+@media (max-width: 860px){
+
+    .shadow {
+        display: block;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    header {
+        position: fixed;
+        background-color: #000000;
+        padding: 7px;
+        width: 100%;
+        height: 40px;
+        z-index: 2;
+    }
+        header .menu {
+            background-color: #000000cc;
+            position: absolute;
+            left: 0;
+            top: 54px;
+            bottom: 0;
+            height: 100%;
+            min-height: 800px;
+            padding: 50px;
+            width: 150px;
+            z-index: 10;
+            transition: cubic-bezier(0.65, 0.05, 0.36, 1) .4s;
+            -moz-transition: cubic-bezier(0.65, 0.05, 0.36, 1) .4s;
+            -webkit-transition: cubic-bezier(0.65, 0.05, 0.36, 1) .4s;
+            transform: translate(-100%, 0px);
+        }
+            header .menu_on {
+                transform: translate(0%, 0px);               
+            }
+            header .menu li {
+                display: block;
+                padding: 10px;
+            }
+
+    .container-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 604px) {
+
+    .container-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
