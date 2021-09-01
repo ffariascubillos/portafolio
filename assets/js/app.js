@@ -1,10 +1,10 @@
 //carga del sitio
-// window.addEventListener('load', function(){
-//     setTimeout(() => {
-//         // alert('Sitio cargado!')
-//         $('.loader').addClass('off-loader')  
-//     }, 3000)
-// })
+window.addEventListener('load', function(){
+    setTimeout(() => {
+        // alert('Sitio cargado!')
+        $('.loader').addClass('off-loader')  
+    }, 3000)
+})
 
 AOS.init() // Inicia plugin AOS.
 

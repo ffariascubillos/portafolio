@@ -13,11 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--plugins-->
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/css/lightgallery.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/plugins/slick-1.8.1/slick-theme.css">
+    <link type="text/css" rel="stylesheet" href="assets/plugins/slick-1.8.1/slick.css">
 </head>
 <body>
     <!-- Loader -->
-    <!-- <div class="loader">
+    <div class="loader">
         <div class="container h-100">
             <div class="table-100">
                 <div class="table-cell-100">
@@ -27,7 +30,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- fin loader -->
     <header
     data-aos="fade-down"
@@ -189,106 +192,108 @@
                     data-aos="fade-up"
                     data-aos-duration="1000">Portafolio</h2>   
                 </div>
-                <div class="main-portafolio container-grid">
-                    <!-- proyecto Uniacc -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/uniacc.html">
-                            <h4 class="text-dark">Universidad UNIACC</h4>
-                            <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto docmovi -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/docmovi.html">
-                            <h4 class="text-dark">DOCMOVI</h4>
-                            <p class="text-dark">Desarrollo web, conexión API REST Nodejs.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto age cellskinlab -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/age-cellskinlab.html">
-                            <h4 class="text-dark">Age CellSkinLab</h4>
-                            <p class="text-dark">Armado y programación LandingPage publicitario.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto PREU 7 -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/preu7.html">
-                            <h4 class="text-dark">PREU 7</h4>
-                            <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto resetdigital -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/resetdigital.html">
-                            <h4 class="text-dark">Agencia Reset</h4>
-                            <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto Instituo IACC -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/instituto-iacc.html">
-                            <h4 class="text-dark">Instituto IACC</h4>
-                            <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto age cellskinlab -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/neotone.html">
-                            <h4 class="text-dark">Neotone para Médicos</h4>
-                            <p class="text-dark">Armado y programación LP.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto Biblioteca Uniacc -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/biblioteca-uniacc.html">
-                            <h4 class="text-dark">Biblioteca UNIACC</h4>
-                            <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto age cellskinlab -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/cellskinlab-antigaging.html">
-                            <h4 class="text-dark">CellSkinLab Antigaging</h4>
-                            <p class="text-dark">Armado y programación LP.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- proyecto age cellskinlab -->
-                    <div class="proyecto grid">
-                        <a href="proyectos/age-concurso.html">
-                            <h4 class="text-dark">CellSkinLab Concurso</h4>
-                            <p class="text-dark">Armado y programación LP.</p>
-                            <div class="ver-ahora">
-                                <p>Ver proyecto</p>
-                            </div>
-                        </a>
+                <div class="main-portafolio">
+                    <div class="slider" id="slider">
+                        <!-- proyecto Uniacc -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/uniacc.html">
+                                <h4 class="text-dark">Universidad UNIACC</h4>
+                                <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto docmovi -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/docmovi.html">
+                                <h4 class="text-dark">DOCMOVI</h4>
+                                <p class="text-dark">Desarrollo web, conexión API REST Nodejs.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto age cellskinlab -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/age-cellskinlab.html">
+                                <h4 class="text-dark">Age CellSkinLab</h4>
+                                <p class="text-dark">Armado y programación LandingPage publicitario.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto PREU 7 -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/preu7.html">
+                                <h4 class="text-dark">PREU 7</h4>
+                                <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto resetdigital -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/resetdigital.html">
+                                <h4 class="text-dark">Agencia Reset</h4>
+                                <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto Instituo IACC -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/instituto-iacc.html">
+                                <h4 class="text-dark">Instituto IACC</h4>
+                                <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto age cellskinlab -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/neotone.html">
+                                <h4 class="text-dark">Neotone para Médicos</h4>
+                                <p class="text-dark">Armado y programación LP.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto Biblioteca Uniacc -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/biblioteca-uniacc.html">
+                                <h4 class="text-dark">Biblioteca UNIACC</h4>
+                                <p class="text-dark">Desarrollo web, Frontend, Backend y Bases de datos.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto age cellskinlab -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/cellskinlab-antigaging.html">
+                                <h4 class="text-dark">CellSkinLab Antigaging</h4>
+                                <p class="text-dark">Armado y programación LP.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- proyecto age cellskinlab -->
+                        <div class="proyecto grid">
+                            <a href="proyectos/age-concurso.html">
+                                <h4 class="text-dark">CellSkinLab Concurso</h4>
+                                <p class="text-dark">Armado y programación LP.</p>
+                                <div class="ver-ahora">
+                                    <p>Ver proyecto</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -305,8 +310,13 @@
             </div>
         </footer>
     </div>
+    <!--plugins-->
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/plugins/slick-1.8.1/slick.min.js"></script>
+    <!--app-->
     <script src="assets/js/app.js"></script>
+    <!--script-->
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

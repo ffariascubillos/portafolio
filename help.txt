@@ -1,0 +1,4 @@
+//iniciar servidor.
+> browser-sync start --server --files "*index.html, assets/js/*.js, assets/css/*.css, modulos/*.js, proyectos/*.html"
+
+
