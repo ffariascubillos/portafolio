@@ -39,6 +39,33 @@ export default function Works() {
         "Campaña Chilean For A Day copa América en Texas Estados Unidos. Página web solamente para mobile.",
       tech: ["HTML5", "CSS", "Javascript"],
     },
+    {
+      id: 5,
+      title: "Super Cerdo - Saborizados 2",
+      folder: "supercerdo_saborizados2",
+      cover: new URL("../assets/trabajos/supercerdo_saborizados2/portada.png", import.meta.url).href,
+      description:
+        "Segunda versión de la Landing Page de Super Cerdo, con un diseño más fresco y moderno.",
+      tech: ["HTML5", "PHP", "MySQL", "CSS", "Javascript"],
+    },
+    {
+      id: 6,
+      title: "Super Cerdo - Sitio Web Corporativo",
+      folder: "supercerdo_corporativo",
+      cover: new URL("../assets/trabajos/supercerdo_corporativo/portada.png", import.meta.url).href,
+      description:
+        "Sitio web desarrollado en WordPress para Super Cerdo, con un administrador para gestionar el contenido del sitio. Mantención constantemente.",
+      tech: ["HTML5", "PHP", "MySQL", "WordPress", "CSS", "Javascript"],
+    },
+    {
+      id: 7,
+      title: "McCann Worldgroup",
+      folder: "mccann",
+      cover: new URL("../assets/trabajos/mccann/portada.png", import.meta.url).href,
+      description:
+        "Sitio web diseñado desde cero según marca y colores corporativos de McCann Worldgroup Chile. Desarrollado en WordPress desde cero con un administrador para gestionar el contenido del sitio. Mantención constantemente.",
+      tech: ["HTML5", "PHP", "MySQL", "WordPress", "CSS", "Javascript"],
+    },
   ];
 
   return (
