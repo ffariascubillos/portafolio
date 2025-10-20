@@ -1,3 +1,20 @@
 @import "tailwindcss";
 
 html { scroll-behavior: smooth; }
+
+/* === Fondo animado con estrellas === */
+.starry-bg {
+  background-color: #0b0b0b;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 80px 120px, rgba(255,255,255,0.15), transparent),
+    radial-gradient(1px 1px at 250px 200px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 400px 50px, rgba(255,255,255,0.25), transparent);
+  background-size: 400px 400px;
+  animation: starsMove 120s linear infinite;
+}
+
+@keyframes starsMove {
+  from { background-position: 0 0, 0 0, 0 0, 0 0; }
+  to { background-position: -1000px 500px, -800px 400px, -600px 300px, -400px 200px; }
+}
