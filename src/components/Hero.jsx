@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import fotoPerfil from "../assets/foto-avatar.jpeg"; // <-- guarda tu imagen en src/assets
 
 export default function Hero() {
   return (
@@ -11,16 +10,6 @@ export default function Hero() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Imagen de perfil
-      <motion.img 
-        src={fotoPerfil}
-        alt="Foto Avatar"
-        className="w-64 h-64 object-cover rounded-lg shadow-lg"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-      /> */}
-
       {/* Texto y enlaces */}
       <motion.div
         className="max-w-md text-center"

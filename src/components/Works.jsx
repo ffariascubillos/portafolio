@@ -32,12 +32,12 @@ export default function Works() {
     },
     {
       id: 4,
-      title: "Landing Adidas",
-      folder: "adidas",
-      cover: new URL("../assets/trabajos/adidas/portada.png", import.meta.url).href,
+      title: "McCann Worldgroup",
+      folder: "mccann",
+      cover: new URL("../assets/trabajos/mccann/portada.png", import.meta.url).href,
       description:
-        "Campaña Chilean For A Day copa América en Texas Estados Unidos. Página web solamente para mobile.",
-      tech: ["HTML5", "CSS", "Javascript"],
+        "Sitio web diseñado desde cero según marca y colores corporativos de McCann Worldgroup Chile. Desarrollado en WordPress desde cero con un administrador para gestionar el contenido del sitio. Mantención constantemente.",
+      tech: ["HTML5", "PHP", "MySQL", "WordPress", "CSS", "Javascript"],
     },
     {
       id: 5,
@@ -59,12 +59,12 @@ export default function Works() {
     },
     {
       id: 7,
-      title: "McCann Worldgroup",
-      folder: "mccann",
-      cover: new URL("../assets/trabajos/mccann/portada.png", import.meta.url).href,
+      title: "Landing Adidas",
+      folder: "adidas",
+      cover: new URL("../assets/trabajos/adidas/portada.png", import.meta.url).href,
       description:
-        "Sitio web diseñado desde cero según marca y colores corporativos de McCann Worldgroup Chile. Desarrollado en WordPress desde cero con un administrador para gestionar el contenido del sitio. Mantención constantemente.",
-      tech: ["HTML5", "PHP", "MySQL", "WordPress", "CSS", "Javascript"],
+        "Campaña Chilean For A Day copa América en Texas Estados Unidos. Página web solamente para mobile.",
+      tech: ["HTML5", "CSS", "Javascript"],
     },
   ];
 
@@ -75,14 +75,14 @@ export default function Works() {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.05 }}
     >
       <h3 className="text-2xl font-bold mb-4">TRABAJOS</h3>
       <div className="border-b-2 border-black w-12 mb-8"></div>
       <p className="text-1xl font-bold mb-10">Al abrir un trabajo puedes hacer zoom con doble click, con la rueda del mouse o con sus dedos en mobile</p>
 
       {/* GRID DE CARDS */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
         {projects.map((p, i) => (
           <motion.div
             key={p.id}
