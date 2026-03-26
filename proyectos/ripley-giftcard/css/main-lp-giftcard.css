@@ -11913,7 +11913,7 @@ body {
 @media (max-width: 768px) {
   #minisitio_giftcard .containerSubHeader {
     height: 60px;
-    top: 140px;
+    top: 0;
   }
 }
 #minisitio_giftcard .containerSubHeader .subHeader {
@@ -11930,7 +11930,7 @@ body {
     display: block;
     transform: translate(-100%, 0);
     position: fixed;
-    top: 140px;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
