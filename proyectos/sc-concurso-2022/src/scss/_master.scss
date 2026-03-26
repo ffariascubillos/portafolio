@@ -1,0 +1,258 @@
+$white: #fff;
+$lightgrey: #f3f3f3;
+$scred: #b83e39;
+$red: red;
+$wine: #761716;
+$shadow: #00000082;
+$bliss: 'bliss';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: url(../img/home-v2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    max-width: 49%;
+    height: 100%;
+
+    &:before {
+        border-top: solid 7px $white;
+        background: url(../img/productos.svg) no-repeat center center;
+        background-size: cover;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        border-top: solid 7px $white;
+        border-right: solid 7px $white;
+        background-color: $scred;
+        transform: skew(-10deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+}
+
+.section {
+    position: relative;
+    height: 100%;
+    padding: 0 10px 10px;
+    z-index: 1;
+}
+
+.textos {
+    max-width: 350px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-align: center;
+        color: $white;
+        font-family: "bliss";
+        font-size: 18px;
+        margin: 0 0 10px;
+
+        strong {
+            font-weight: 900;
+        }
+    }
+}
+
+.bubbles {
+    width: 100%;
+
+    p {
+        font-weight: bold;
+        font-size: 15px;
+        background: $wine;
+        border-radius: 40px;
+        padding: 10px 6px;
+        margin: 0 0 5px;
+    }
+}
+
+h1 {
+    color: $white;
+    border: solid 4px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    
+    .megaletra {
+        font-size: 4em;
+        font-style: italic;
+        line-height: .75em;
+    }
+    
+    .letrapeke {
+        font-size: 1.625em;
+        font-style: italic;
+        margin: 0 0.3125em;
+        position: relative;
+        vertical-align: super;
+    }
+    
+    .medialetra {
+        font-family: $bliss;
+        font-size: 2.875em;
+        font-weight: bold;
+    }
+}
+
+form {
+    color: $white;
+    border-radius: 25px;
+    padding: 20px 0 5px;
+    position: relative;
+    width: 100%;
+
+    div {
+        margin-bottom: 8px;
+
+        span {
+            font-family: $bliss;
+            font-size: 12px;
+            text-align: left;
+        }
+    }
+}
+
+.col-left,
+.col-right {
+    float: left;
+    width: 50%;
+    padding: 0 4px 0 0;
+}
+
+.col-right { padding: 0 0 0 4px; }
+
+input, select, textarea {
+    font-family: $bliss;
+    font-size: 13px;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    outline: none;
+    padding: 8px 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+.foto-label {
+    cursor: pointer;
+    display: block;
+    transition: ease all .3s;
+    &:hover {
+        opacity: .95;
+    }
+    button {
+        border: none;
+        pointer-events: none;
+        border-radius: 30px;
+        width: 100%;
+        height: 38px;
+        position: relative;
+
+        span {
+            font-family: $bliss;
+            font-size: 11px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+#input-file {
+    display: none;
+}
+
+button[type=submit] {
+    cursor: pointer;
+    font-family: $bliss;
+    background: none;
+    color: $white;
+    border: solid 3px;
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: table;
+    margin: 0 auto;
+}
+
+#form-loader {
+    background-color: $shadow;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loader {
+        border: 10px solid $lightgrey; /* Light grey */
+        border-top: 10px solid $red; /* wine */
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
+
+.d-none {
+    display: none !important;
+}

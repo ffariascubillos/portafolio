@@ -1,0 +1,9 @@
+.thumb {
+    width: 100%;
+    max-width: 150px;
+}
+
+.receta {
+    max-width: 150px;
+    overflow: auto;
+}

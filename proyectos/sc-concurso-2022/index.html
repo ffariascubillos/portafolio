@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9224705-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-9224705-7');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TLHNC3S');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Ads: 807014227 --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-807014227"></script> 
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-807014227'); </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperCerdo Concurso</title>
+    <link rel="stylesheet" href="./src/css/bundle.min.css?ver=1.4">
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLHNC3S"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!--contenedor principal-->
+    <div class="wrapper">
+        <div class="container">
+            <div class="section">
+                <div class="textos">
+                    <h1>
+                        <span class="megaletra">Recetario<br></span>
+                        <span class="letrapeke">del</span> <span class="medialetra">Chile</span> <span class="letrapeke">de</span> <span class="medialetra">hoy</span>
+                    </h1>
+                    <p>
+                        Comparte tu receta con uno de <br>
+                        nuestros productos y participa por:
+                    </p>
+                    <div class="bubbles">
+                        <p>Sorteos diarios de Kits de productos Super Cerdo</p>
+                        <p>2 premios de 1 año de productos Super Cerdo</p>
+                    </div>
+                    <form id="form">
+                        <div>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido*">
+                        </div>
+                        <div class="col-left">
+                            <input type="text" name="email" id="email" placeholder="Email*">
+                        </div>
+                        <div class="col-right">
+                            <input type="text" name="region" id="region" placeholder="Región*">
+                        </div>
+                        <div>
+                            <textarea name="receta" id="receta" placeholder="Escribe tu receta*"></textarea>
+                        </div>
+                        <div>
+                            <span>Obligatorio(*)</span>
+                        </div>
+                        <div>
+                            <button type="submit">Enviar</button>
+                        </div>
+                        <div id="form-loader" class="d-none">
+                            <div class="loader"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/app/form.js?ver=1.2"></script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d9d9d9;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.full-section {
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.section {
+  margin: 100px 0;
+}
+
+.sobre-mi__image {
+  flex: 0 0 280px;
+}
+
+.sobre-mi__image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ccc;
+}
+
+.sobre-mi__content {
+  flex: 1;
+}
+
+.profile-name {
+  margin-bottom: 10px;
+}
+
+.profile-job {
+  margin: 0;
+}
+
+.btn {
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 12px;
+  transition: ease 0.2s;
+}
+.btn:hover {
+  background-color: #777777;
+}
+
+/* Utils */
+
+.border-b {
+  display: table;
+  margin-right: auto;
+  border-bottom: solid 2px;
+  padding-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mt-2 {
+  margin-top: 25px;
+}
+.mt-3 {
+  margin-top: 45px;
+}
+.mt-5 {
+  margin-top: 65px;
+}
+.mb-5 {
+  margin-bottom: 65px;
+}
+.my-5 {
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+.ml-auto {
+  margin-left: auto;
+}
+
+.w-100 {
+  width: 100%;
+  display: block;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  fill: #000;
+  transition: 0.2s;
+}
+
+.icon:hover {
+  fill: #555;
+}
+
+/* PROYECTOS */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.card__img {
+  width: 100%;
+  display: block;
+  height: 280px;
+  object-fit: cover;
+}
+.card__body {
+  padding: 20px;
+}
+.card__title {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+.card__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.card__tags span,
+.tags {
+  padding: 6px 10px;
+  background: #f1f1f1;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+.card__links {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .full-section {
+    margin-top: 50px;
+  }
+  .sobre-mi {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sobre-mi__image img {
+    margin: 0 auto;
+  }
+  .profile-name {
+    text-align: center;
+  }
+  .profile-job {
+    margin-left: auto;
+    margin-bottom: 40px;
+  }
+  .mr-auto-xs {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}

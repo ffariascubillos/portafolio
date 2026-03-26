@@ -1,0 +1,3 @@
+// Minimizar archivo js
+
+node-minify --compressor uglify-js --input 'input.js' --output 'output.js'

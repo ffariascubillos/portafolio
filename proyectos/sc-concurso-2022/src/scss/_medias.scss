@@ -1,0 +1,45 @@
+@media (max-width: 992px){
+
+    .container {
+        max-width: 100%;
+
+        &:after {
+            transform: skew(0deg);
+            border: none;
+        }
+        &:before {
+            border: none;
+        }
+    }
+
+    .section {
+        padding: 0 30px 10px;
+    }
+
+    .textos p {
+        margin: 10px 0;
+    }
+
+    .textos {
+
+        h1 {
+            color: #fff;
+            border: solid 5px;
+            border-top: 0;
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 25px;
+            width: 100%;        
+        }
+    }
+
+    form {
+        padding: 20px 0;
+    }
+
+    .col-left, .col-right {
+        padding: 0;
+        float: none;
+        width: 100%;
+    }
+}
