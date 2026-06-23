@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Felipe Farías | Full Stack Developer</title>
+    <title>Felipe Farías | Desarrollador Web Full Stack</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,52 +13,91 @@
     <link rel="stylesheet" href="./assets/css/app.css" />
   </head>
   <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="#sobre-mi">Felipe Far&iacute;as</a>
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-label="Abrir menu de navegacion"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          data-site-nav-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav
+          id="site-nav"
+          class="site-nav"
+          aria-label="Navegacion principal"
+          data-site-nav>
+          <a
+            class="site-nav__link is-active"
+            href="#sobre-mi"
+            aria-current="page"
+            data-nav-link
+            >Inicio</a
+          >
+          <a class="site-nav__link" href="#experiencia" data-nav-link
+            >Experiencia</a
+          >
+          <a class="site-nav__link" href="#proyectos" data-nav-link
+            >Proyectos</a
+          >
+        </nav>
+      </div>
+    </header>
     <div class="wrapper">
       <section id="sobre-mi" class="full-section sobre-mi">
         <div class="sobre-mi__image">
-          <div class="aos-zoom-in">
+          <div data-aos="zoom-in">
             <img class="w-100" src="./assets/images/perfil.jpeg" alt="perfil" />
           </div>
           <div>
-            <h2 class="profile-name aos-fade-left">Felipe Farías</h2>
-            <h3 class="profile-job border-b aos-fade-right">
+            <h2 class="profile-name" data-aos="fade-left">Felipe Farías</h2>
+            <h3 class="profile-job border-b" data-aos="fade-right">
               Desarrollador Web Full Stack
             </h3>
-            <h3 class="mt-3 aos-fade-up">Stack Tecnológico</h3>
-            <div class="card__tags aos-zoom-in">
-              <span class="tags">JavaScript</span>
-              <span class="tags">React</span>
-              <span class="tags">jQuery</span>
-              <span class="tags">HTML</span>
-              <span class="tags">CSS</span>
-              <span class="tags">WordPress</span>
-              <span class="tags">PHP</span>
-              <span class="tags">SQL</span>
-              <span class="tags">Tailwind</span>
-              <span class="tags">Bootstrap</span>
-              <span class="tags">Git</span>
+            <h3 class="mt-3" data-aos="fade-up">Stack Tecnológico</h3>
+            <div class="tag-list" data-aos="zoom-in">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>UX/UI</span>
+              <span>WordPress</span>
+              <span>PHP</span>
+              <span>SQL</span>
+              <span>Tailwind</span>
+              <span>Bootstrap</span>
+              <span>Git</span>
             </div>
           </div>
         </div>
         <div class="sobre-mi__content">
-          <h2 class="border-b aos-fade-left">Perfil Profesional</h2>
-          <p class="text-justify aos-fade-right">
-            Especializado en el desarrollo frontend, backend y mantenimiento de
-            plataformas web a medida, tanto nativas como basadas en CMS. Experto
-            en la transformación de diseños complejos a Código, siguiendo buenas
-            prácticas Responsive Design, optimización de rendimiento web (WPO),
-            analítica, SEO, despliegue en servidores y control de versiones con
-            Git, liderando proyectos para agencias de publicidad transnacionales
-            y entidades estatales. Actualmente enfocado en el ecosistema moderno
-            de React y TypeScript, integrando agentes de IA para optimizar la
-            eficiencia y velocidad en el flujo de desarrollo.
+          <h2 class="border-b" data-aos="fade-left">Perfil Profesional</h2>
+          <p class="text-justify" data-aos="fade-right">
+            Especializado en la arquitectura, diseño, desarrollo frontend,
+            backend y mantenimiento de plataformas web a medida, tanto nativas
+            como basadas en CMS. Experto en la transformación de diseños
+            complejos a Código, siguiendo buenas prácticas Responsive Design,
+            optimización de rendimiento web (WPO), analítica, SEO, despliegue en
+            servidores y control de versiones con Git, liderando proyectos para
+            agencias de publicidad transnacionales y entidades estatales.
+            Actualmente enfocado en el ecosistema moderno de React y TypeScript,
+            integrando agentes de IA para optimizar la eficiencia y velocidad en
+            el flujo de desarrollo.
           </p>
-          <div class="mt-3 aos-fade-left">
+          <div class="mt-3" data-aos="fade-left">
             <a href="#proyectos" class="btn">Ver Trabajos</a>
           </div>
-          <h3 class="mt-3 border-b aos-fade-right">Contacto</h3>
-          <div class="aos-zoom-in">
-            <a target="_blank" href="https://github.com/ffariascubillos">
+          <h3 class="mt-3 border-b" data-aos="fade-right">Contacto</h3>
+          <div data-aos="zoom-in">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/ffariascubillos">
               <svg
                 class="icon"
                 viewBox="0 0 24 24"
@@ -67,7 +106,7 @@
                   d="M12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 16.42 4.87 20.17 8.84 21.5C9.34 21.58 9.5 21.27 9.5 21V19.31C6.73 19.91 6.14 17.97 6.14 17.97C5.68 16.81 5.03 16.5 5.03 16.5C4.12 15.88 5.1 15.9 5.1 15.9C6.1 15.97 6.63 16.93 6.63 16.93C7.5 18.45 8.97 18 9.54 17.76C9.63 17.11 9.89 16.67 10.17 16.42C7.95 16.17 5.62 15.31 5.62 11.5C5.62 10.39 6 9.5 6.65 8.79C6.55 8.54 6.2 7.5 6.75 6.15C6.75 6.15 7.59 5.88 9.5 7.17C10.29 6.95 11.15 6.84 12 6.84C12.85 6.84 13.71 6.95 14.5 7.17C16.41 5.88 17.25 6.15 17.25 6.15C17.8 7.5 17.45 8.54 17.35 8.79C18 9.5 18.38 10.39 18.38 11.5C18.38 15.32 16.04 16.16 13.81 16.41C14.17 16.72 14.5 17.33 14.5 18.26V21C14.5 21.27 14.66 21.59 15.17 21.5C19.14 20.16 22 16.42 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z" />
               </svg>
             </a>
-            <a target="_blank" href="mailto:ffariascubillos@gmail.com">
+            <a href="mailto:ffariascubillos@gmail.com">
               <svg
                 class="icon"
                 viewBox="0 0 24 24"
@@ -76,7 +115,10 @@
                   d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
               </svg>
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/fc-felipe/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/fc-felipe/">
               <svg
                 class="icon"
                 viewBox="0 0 24 24"
@@ -88,30 +130,213 @@
           </div>
         </div>
       </section>
+      <section id="experiencia" class="section">
+        <h2
+          class="text-center border-b ml-auto mt-5 mr-auto-xs"
+          data-aos="fade-left">
+          Experiencia
+        </h2>
+        <p class="text-justify mt-0 mb-5" data-aos="fade-up">
+          Experiencia laboral en Arquitectura, diseño y desarrollo web,
+          implementación frontend y backend, mantenimiento de plataformas
+          digitales y colaboración con equipos de diseño, marketing y negocio
+          para clientes de distintos rubros.
+        </p>
+        <div class="experiencia-grid">
+          <article class="experience-card" data-aos="fade-down">
+            <div class="experience-card__header">
+              <h3 class="experience-card__title">CORFO</h3>
+              <h4 class="experience-card__subtitle">Desarrollador WordPress</h4>
+              <span class="experience-card__year">Nov 2025 - Feb 2026</span>
+            </div>
+            <div class="experience-card__text">
+              <ul>
+                <li>
+                  <strong
+                    >Desarrollo de módulos, funcionalidades y Plugins</strong
+                  >
+                  utilizando PHP y JavaScript, reduciendo la dependencia de
+                  plugins de terceros.
+                </li>
+                <li>
+                  <strong>Optimización de rendimiento web (WPO)</strong> en
+                  portales institucionales,
+                  <strong>reduciendo el tiempo de carga en un 90%.</strong>
+                </li>
+                <li>
+                  <strong
+                    >Liderazgo técnico en la migración de plataformas
+                    Web</strong
+                  >
+                  hacia nuevos servidores.
+                </li>
+                <li>
+                  <strong
+                    >Resolución de incidencias críticas en producción</strong
+                  >
+                  para sitios corporativos de alto tráfico (soy.corfo.cl,
+                  corfo.cl, startupchile.org),
+                  <strong>asegurando disponibilidad (uptime)</strong> del
+                  servicio.
+                </li>
+              </ul>
+            </div>
+            <p class="experience-card__clients">
+              <strong>Clientes:</strong> corfo.cl, soy.corfo.cl,
+              startupchile.org
+            </p>
+            <div class="experience-card__meta">
+              <h4>Tecnologías utilizadas</h4>
+              <div class="tag-list">
+                <span>PHP</span>
+                <span>JavaScript</span>
+                <span>WordPress</span>
+                <span>MySQL</span>
+                <span>SSH</span>
+                <span>Nginx</span>
+                <span>Git</span>
+                <span>Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="experience-card" data-aos="fade-up">
+            <div class="experience-card__header">
+              <h3 class="experience-card__title">McCann WorldGroup / MRM</h3>
+              <h4 class="experience-card__subtitle">Desarrollador web</h4>
+              <span class="experience-card__year">Sep 2021 - Oct 2025</span>
+            </div>
+            <div class="experience-card__text">
+              <ul>
+                <li>
+                  <strong
+                    >Desarrollo completo (End-to-End) de más de 100 sitios web
+                    corporativos, Emails HTML y landing pages</strong
+                  >
+                  de alta conversión para campañas de grandes marcas.
+                </li>
+                <li>
+                  <strong
+                    >Diseño y construcción de dashboards de reportería
+                    internos</strong
+                  >
+                  y módulos CRUD optimizados, mejorando los tiempos de gestión
+                  de usuarios y datos de la agencia.
+                </li>
+                <li>
+                  <strong
+                    >Integración de APIs externas y creación de endpoints en
+                    backend</strong
+                  >
+                  para el renderizado dinámico de datos en tiempo real en
+                  interfaces frontend.
+                </li>
+                <li>
+                  <strong
+                    >Administración, despliegue y configuración de entornos de
+                    producción</strong
+                  >
+                  en servidores Apache/Nginx vía SSH.
+                </li>
+              </ul>
+            </div>
+            <p class="experience-card__clients">
+              <strong>Clientes:</strong> Cenco Malls, Entel, Ripley, SuperCerdo,
+              MetLife, Adidas, Nestlé, Rheem, Virutex.
+            </p>
+            <div class="experience-card__meta">
+              <h4>Tecnologías utilizadas</h4>
+              <div class="tag-list">
+                <span>Figma</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>WordPress</span>
+                <span>MySQL</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="experience-card" data-aos="fade-right">
+            <div class="experience-card__header">
+              <h3 class="experience-card__title">EL LIVING (Zoo Digital)</h3>
+              <h4 class="experience-card__subtitle">Desarrollador web</h4>
+              <span class="experience-card__year">Sep 2021 - Oct 2025</span>
+            </div>
+            <div class="experience-card__text">
+              <ul>
+                <li>
+                  <strong>Maquetación de interfaces</strong> aplicando buenas
+                  prácticas <strong>Responsive Design</strong> para proyectos
+                  web complejos a partir de especificaciones de diseño y
+                  <strong>experiencia de usuario (UX).</strong>
+                </li>
+                <li>
+                  Implementación de buenas prácticas Web,
+                  <strong
+                    >logrando un incremento en la retención de usuarios.</strong
+                  >
+                </li>
+                <li>
+                  <strong>Integración de APIs y pasarelas de pago. </strong>
+                </li>
+              </ul>
+            </div>
+            <p class="experience-card__clients">
+              <strong>Clientes:</strong> Cruz Verde, Total, UNIACC, IACC,
+              Tronwell, Jardín Infantil Vitamina.
+            </p>
+            <div class="experience-card__meta">
+              <h4>Tecnologías utilizadas</h4>
+              <div class="tag-list">
+                <span>Figma</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+                <span>WordPress</span>
+                <span>PHP</span>
+                <span>jQuery</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
       <section id="proyectos" class="section">
-        <h2 class="text-center border-b ml-auto mt-5 mr-auto-xs aos-fade-left">
+        <h2
+          class="text-center border-b ml-auto mt-5 mr-auto-xs"
+          data-aos="fade-left">
           Proyectos
         </h2>
-        <p class="text-justify mt-0 mb-5 aos-fade-up">
+        <p class="text-justify mt-0 mb-5" data-aos="fade-up">
           Selección de proyectos en los que he participado, con foco en
           desarrollo frontend, experiencia de usuario, implementación responsive
           y soluciones web orientadas a objetivos de negocio.
         </p>
         <div class="proyectos-grid">
-          <article class="card aos-fade-left">
+          <article class="card" data-aos="fade-down">
             <img
               class="card__img"
               src="./proyectos/ripley-giftcard/portada.png"
-              alt="Mccann WorldGroup" />
+              alt="Landing page de Ripley Giftcard"
+              width="1202"
+              height="728"
+              loading="lazy"
+              decoding="async" />
 
             <div class="card__body">
               <h3 class="card__title">Ripley - Giftcard</h3>
               <p class="card__text text-justify">
+                Apoyo en diseño UX/UI. Maquetación (Responsive Design),
                 Desarrollo de landing page para la campaña Gift Card 2025,
                 enfocada en conversión, performance y experiencia de usuario.
               </p>
 
-              <div class="card__tags">
+              <div class="card__tags tag-list">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>SASS</span>
@@ -123,6 +348,7 @@
               <div class="card__links">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="btn"
                   href="./proyectos/ripley-giftcard/"
                   >Ver Proyecto</a
@@ -130,21 +356,25 @@
               </div>
             </div>
           </article>
-          <article class="card aos-fade-left">
+          <article class="card" data-aos="fade-up">
             <img
               class="card__img"
               src="./proyectos/sc-concurso-2023/portada.jpg"
-              alt="Mccann WorldGroup" />
+              alt="Campaña SuperCerdo Compra y Gana"
+              width="1148"
+              height="1076"
+              loading="lazy"
+              decoding="async" />
 
             <div class="card__body">
               <h3 class="card__title">SuperCerdo - Compra y Gana</h3>
               <p class="card__text text-justify">
-                Desarrollo de landing para campaña promocional, permitiendo el
-                ingreso y validación de códigos de productos, con foco en
-                usabilidad, conversión y experiencia de usuario.
+                Maquetación y Desarrollo de landing para campaña promocional,
+                permitiendo el ingreso y validación de códigos de productos, con
+                foco en usabilidad, conversión y experiencia de usuario.
               </p>
 
-              <div class="card__tags">
+              <div class="card__tags tag-list">
                 <span>PHP</span>
                 <span>JavaScript</span>
                 <span>HTML</span>
@@ -155,6 +385,7 @@
               <div class="card__links">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="btn"
                   href="./proyectos/sc-concurso-2023/"
                   >Ver Proyecto</a
@@ -162,11 +393,15 @@
               </div>
             </div>
           </article>
-          <article class="card aos-fade-left">
+          <article class="card" data-aos="fade-down">
             <img
               class="card__img"
               src="./proyectos/chileansforaday/portada.png"
-              alt="Chileans For A Day" />
+              alt="Landing page Chileans For A Day"
+              width="195"
+              height="294"
+              loading="lazy"
+              decoding="async" />
 
             <div class="card__body">
               <h3 class="card__title">Adidas - Copa América Texas</h3>
@@ -177,7 +412,7 @@
                 experiencia de usuario.
               </p>
 
-              <div class="card__tags">
+              <div class="card__tags tag-list">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
@@ -189,6 +424,7 @@
               <div class="card__links">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="btn"
                   href="./proyectos/chileansforaday/"
                   >Ver Proyecto</a
@@ -196,11 +432,15 @@
               </div>
             </div>
           </article>
-          <article class="card aos-fade-right">
+          <article class="card" data-aos="fade-up">
             <img
               class="card__img"
               src="./proyectos/sc-cl/portada.png"
-              alt="SuperCerdo.cl" />
+              alt="Sitio web SuperCerdo.cl"
+              width="1759"
+              height="872"
+              loading="lazy"
+              decoding="async" />
 
             <div class="card__body">
               <h3 class="card__title">SuperCerdo.cl</h3>
@@ -210,7 +450,7 @@
                 experiencia de usuario.
               </p>
 
-              <div class="card__tags">
+              <div class="card__tags tag-list">
                 <span>WordPress</span>
                 <span>Elementor</span>
                 <span>PHP</span>
@@ -220,27 +460,36 @@
               </div>
 
               <div class="card__links">
-                <a class="btn" target="_blank" href="https://supercerdo.cl"
+                <a
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://supercerdo.cl"
                   >Ver Proyecto</a
                 >
               </div>
             </div>
           </article>
-          <article class="card aos-fade-right">
+          <article class="card" data-aos="fade-down">
             <img
               class="card__img"
               src="./proyectos/mccann/portada.png"
-              alt="Mccann WorldGroup" />
+              alt="Sitio web McCann WorldGroup"
+              width="788"
+              height="899"
+              loading="lazy"
+              decoding="async" />
 
             <div class="card__body">
               <h3 class="card__title">McCann WorldGroup</h3>
               <p class="card__text text-justify">
-                Desarrollo de sitio web corporativo desde cero con template
-                personalizado en WordPress, priorizando rendimiento, usabilidad
-                y escalabilidad.
+                Diseño UX/UI en Figma. Desarrollo de sitio web corporativo desde
+                cero con template personalizado en WordPress, priorizando
+                rendimiento, usabilidad y escalabilidad.
               </p>
 
-              <div class="card__tags">
+              <div class="card__tags tag-list">
+                <span>Figma</span>
                 <span>WordPress</span>
                 <span>PHP</span>
                 <span>JavaScript</span>
@@ -249,33 +498,165 @@
               </div>
 
               <div class="card__links">
-                <a target="_blank" class="btn" href="https://mccann.cl"
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn"
+                  href="https://mccann.cl"
                   >Ver Proyecto</a
                 >
               </div>
             </div>
           </article>
-          <article class="card aos-fade-right">
+          <article class="card" data-aos="fade-up">
             <img
               class="card__img"
               src="./proyectos/metlife/portada.png"
-              alt="MetLife" />
+              alt="Emails HTML para MetLife"
+              width="595"
+              height="485"
+              loading="lazy"
+              decoding="async" />
 
             <div class="card__body">
               <h3 class="card__title">MetLife - HTML Emails</h3>
               <p class="card__text text-justify">
-                Maquetación y desarrollo de emails en HTML, optimizados para
-                compatibilidad entre distintos clientes de correo, rendimiento y
-                objetivos de conversión.
+                Apoyo Diseño UX/UI. Maquetación y desarrollo de más de 80 emails
+                en HTML, optimizados para compatibilidad entre distintos
+                clientes de correo, rendimiento y objetivos de conversión.
               </p>
 
-              <div class="card__tags">
+              <div class="card__tags tag-list">
                 <span>HTML</span>
                 <span>CSS</span>
               </div>
 
               <div class="card__links">
-                <a target="_blank" class="btn" href="#">Próximamente</a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn"
+                  href="./proyectos/metlife/ejemplo1.html"
+                  >Ver Ejemplo Entel</a
+                >
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn"
+                  href="./proyectos/metlife/ejemplo2.html"
+                  >Ver Ejemplo Tipo 2</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="card" data-aos="fade-down">
+            <img
+              class="card__img"
+              src="./proyectos/raytal/portada.png"
+              alt="Emails HTML para MetLife"
+              width="595"
+              height="485"
+              loading="lazy"
+              decoding="async" />
+
+            <div class="card__body">
+              <h3 class="card__title">RayTal</h3>
+              <p class="card__text text-justify">
+                Diseño UX/UI en Figma, maquetación frontend (Responsive Design)
+                y desarrollo de plantilla personalizada para WordPress.
+              </p>
+
+              <div class="card__tags tag-list">
+                <span>Figma UX/UI</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>WordPress</span>
+              </div>
+
+              <div class="card__links">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn"
+                  href="https://raytal.cl/"
+                  >Ver Proyecto</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="card" data-aos="fade-up">
+            <img
+              class="card__img"
+              src="./proyectos/somosvirutex/portada.png"
+              alt="Emails HTML para MetLife"
+              width="595"
+              height="485"
+              loading="lazy"
+              decoding="async" />
+
+            <div class="card__body">
+              <h3 class="card__title">Somos Virutex</h3>
+              <p class="card__text text-justify">
+                Diseño UX/UI en Figma, maquetación frontend (Responsive Design)
+                y desarrollo de plantilla personalizada para WordPress.
+              </p>
+
+              <div class="card__tags tag-list">
+                <span>Figma UX/UI</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>WordPress</span>
+              </div>
+
+              <div class="card__links">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn"
+                  href="https://somosvirutex.cl/"
+                  >Ver Proyecto</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="card" data-aos="fade-down">
+            <img
+              class="card__img"
+              src="./proyectos/ambitrans/portada.png"
+              alt="Emails HTML para MetLife"
+              width="595"
+              height="485"
+              loading="lazy"
+              decoding="async" />
+
+            <div class="card__body">
+              <h3 class="card__title">Ambitrans</h3>
+              <p class="card__text text-justify">
+                Diseño UX/UI en Figma, maquetación frontend (Responsive Design)
+                y desarrollo de plantilla personalizada para WordPress.
+              </p>
+
+              <div class="card__tags tag-list">
+                <span>Figma UX/UI</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>WordPress</span>
+              </div>
+
+              <div class="card__links">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn"
+                  href="https://ambitrans.cl/"
+                  >Ver Proyecto</a
+                >
               </div>
             </div>
           </article>

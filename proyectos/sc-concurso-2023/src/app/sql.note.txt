@@ -1,1 +1,0 @@
-SELECT * FROM `codigos_concurso_parche` WHERE `codigo_prod` LIKE '%codigo%';

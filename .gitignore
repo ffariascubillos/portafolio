@@ -1,0 +1,20 @@
+.env
+.env.*
+!.env.example
+
+# Local credentials and server-only configuration
+proyectos/**/src/app/config.php
+proyectos/**/config.local.php
+
+# Generated and temporary files
+*.map
+**/tmp/
+**/*_debug.js
+**/dev_*
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.agents
