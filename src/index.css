@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-text: #fff;
+  --color-border: rgb(255 255 255 / 0.12);
+  --radius-card: 16px;
+  --radius-button: 5px;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background font-sans text-text overflow-x-hidden;
+  }
+}

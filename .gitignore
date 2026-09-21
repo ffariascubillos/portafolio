@@ -18,3 +18,8 @@ Thumbs.db
 .vscode/
 .idea/
 .agents
+.claude
+openspec
+workflow.md
+node_modules
+dist
