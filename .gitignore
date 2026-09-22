@@ -25,3 +25,8 @@ workflow.md
 node_modules
 dist
 CV_Felipe_Farias_Cubillos.pdf
+
+# Playwright
+playwright-report/
+test-results/
+.cache/

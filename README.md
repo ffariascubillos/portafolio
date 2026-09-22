@@ -8,24 +8,39 @@ Desarrollador Web Full Stack. Landing pages, WordPress a medida e integraciones 
 
 - **Inicio:** perfil, stack y contacto.
 - **Experiencia:** CORFO, McCann WorldGroup / MRM y El Living.
-- **Proyectos:** selección de trabajos, con demos en `proyectos/`.
+- **Proyectos:** selección de trabajos, con demos en `public/proyectos/`.
+
+## 🏗️ Estructura del proyecto
+
+Vite + React + TypeScript + Tailwind v4 + shadcn/ui, con arquitectura por features:
+
+```
+src/
+  features/    # navigation, hero, experience, projects (cada una con components/ y hooks/)
+  shared/      # components/ui (shadcn), components y hooks reutilizables
+public/
+  proyectos/   # demos estáticas independientes
+```
 
 ## 🛠️ Tecnologías
 
-Hoy: HTML, CSS y JavaScript.
-En camino: React, TypeScript, Tailwind y shadcn/ui.
+React, TypeScript, Tailwind v4, shadcn/ui, Vitest + Testing Library (unit) y Playwright (e2e).
 
-## 💻 Correr en local
+## 💻 Desarrollo local
 
-```powershell
-python -m http.server 8000
+```bash
+npm install
+npm run dev       # servidor de desarrollo
+npm run build     # tsc -b && vite build
+npm run preview   # previsualiza el build de producción
+npm test          # unit tests con Vitest
+npm run test:e2e  # e2e con Playwright
 ```
-
-Abre `http://localhost:8000/`. Por ahora no hay paso de build.
 
 ## 📝 Notas
 
-- Cada demo de `proyectos/` es independiente: no muevas sus archivos sin revisar sus rutas.
+- Cada demo de `public/proyectos/` es independiente: no muevas sus archivos sin revisar sus rutas.
+- El despliegue a GitHub Pages es automático vía `.github/workflows/deploy.yml` al pushear a `main`.
 - Este repo no debe contener credenciales.
 
 ## 📫 Contacto
