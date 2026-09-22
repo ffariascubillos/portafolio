@@ -5,6 +5,7 @@
 # Local credentials and server-only configuration
 proyectos/**/src/app/config.php
 proyectos/**/config.local.php
+proyectos/somosvirutex/report.png
 
 # Generated and temporary files
 *.map
