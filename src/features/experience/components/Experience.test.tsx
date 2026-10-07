@@ -3,31 +3,40 @@ import { describe, expect, it } from 'vitest'
 import { experience } from '../data'
 import { Experience } from './Experience'
 
+const cardOf = (company: string) =>
+  screen.getByText(company).closest('[data-slot="card"]') as HTMLElement
+
 describe('Experience', () => {
-  it('renders one card per job with period, clients and tags', () => {
+  it('renders one card per job in CV order with period, description and optional clients/tags', () => {
     render(<Experience />)
     expect(experience.map((e) => e.company)).toEqual([
+      'Desarrollador Web & Mobile Freelance',
       'CORFO',
       'McCann WorldGroup / MRM',
       'EL LIVING (Zoo Digital)',
     ])
     for (const e of experience) {
-      const card = screen.getByText(e.company).closest('[data-slot="card"]') as HTMLElement
+      const card = cardOf(e.company)
       expect(card).not.toBeNull()
       const scope = within(card)
-      expect(scope.getByText(e.role)).toBeInTheDocument()
+      if (e.role) expect(scope.getByText(e.role)).toBeInTheDocument()
       expect(scope.getByText(e.period)).toBeInTheDocument()
-      expect(card).toHaveTextContent(e.clients)
-      const tags = scope.getAllByRole('listitem').filter((li) => e.tags.includes(li.textContent ?? ''))
-      expect(tags.map((t) => t.textContent)).toEqual(e.tags)
+      expect(scope.getByText(e.description).tagName).toBe('P')
+      if (e.clients) expect(card).toHaveTextContent(e.clients)
+      const tags = scope.queryAllByRole('listitem').map((li) => li.textContent)
+      expect(tags).toEqual(e.tags ?? [])
     }
   })
 
-  it('renders **bold** markers as <strong> without literal asterisks', () => {
+  it('omits the clients line when the CV lists none', () => {
+    render(<Experience />)
+    for (const company of ['Desarrollador Web & Mobile Freelance', 'CORFO']) {
+      expect(cardOf(company)).not.toHaveTextContent('Clientes:')
+    }
+  })
+
+  it('renders no literal ** markers', () => {
     const { container } = render(<Experience />)
     expect(container.textContent).not.toContain('**')
-    const bold = experience[0].bullets.find((b) => b.includes('WPO'))?.match(/\*\*(.+?)\*\*/)?.[1] ?? ''
-    expect(bold).not.toBe('')
-    expect(screen.getByText(bold).tagName).toBe('STRONG')
   })
 })

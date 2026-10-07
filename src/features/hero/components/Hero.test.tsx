@@ -31,6 +31,7 @@ describe('Hero', () => {
       GitHub: 'https://github.com/ffariascubillos',
       Correo: 'mailto:ffariascubillos@gmail.com',
       LinkedIn: 'https://www.linkedin.com/in/fc-felipe/',
+      WhatsApp: 'https://wa.me/56949925241',
     }
     for (const [name, href] of Object.entries(hrefs)) {
       expect(screen.getByRole('link', { name })).toHaveAttribute('href', href)
@@ -38,7 +39,7 @@ describe('Hero', () => {
   })
 
   it('opens external contacts safely in a new tab', () => {
-    for (const name of ['GitHub', 'LinkedIn']) {
+    for (const name of ['GitHub', 'LinkedIn', 'WhatsApp']) {
       const link = screen.getByRole('link', { name })
       expect(link).toHaveAttribute('target', '_blank')
       expect(link).toHaveAttribute('rel', 'noopener noreferrer')

@@ -12,7 +12,7 @@ export function Experience() {
       <p className="text-justify">
         Experiencia laboral en Arquitectura, diseño y desarrollo web, implementación frontend y backend, mantenimiento de plataformas digitales y colaboración con equipos de diseño, marketing y negocio para clientes de distintos rubros.
       </p>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {experience.map((e) => (
           <ExperienceCard key={e.company} {...e} />
         ))}
