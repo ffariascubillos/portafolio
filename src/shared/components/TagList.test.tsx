@@ -14,4 +14,3 @@ describe('TagList', () => {
     expect(screen.queryAllByRole('listitem')).toHaveLength(0)
   })
 })
-ñ
