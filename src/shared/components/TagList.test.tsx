@@ -11,6 +11,7 @@ describe('TagList', () => {
 
   it('renders an empty list without tags', () => {
     render(<TagList tags={[]} />)
-    expect(screen.queryAllByRole('listitem')).toHaveLength(1)
+    expect(screen.queryAllByRole('listitem')).toHaveLength(0)
   })
 })
+ñ
