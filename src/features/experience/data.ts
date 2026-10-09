@@ -12,7 +12,7 @@ export const experience: Experience[] = [
     company: "Desarrollador Web & Mobile Freelance",
     period: "Marzo 2026 – Presente",
     description:
-      "Desarrollo de aplicación móvil veterinaria con React Native, Expo, Node.js, Express y PostgreSQL, implementando API REST, arquitectura modular y persistencia de datos. Desarrollo freelance de sitios y plataformas web en WordPress, desde la maquetación hasta el despliegue, con optimización WPO y buenas prácticas de SEO. Formación continua mediante certificaciones en React y TypeScript, incorporando herramientas y agentes de IA para optimizar el flujo de desarrollo y pruebas de código.",
+      "Desarrolloooo de aplicación móvil veterinaria con React Native, Expo, Node.js, Express y PostgreSQL, implementando API REST, arquitectura modular y persistencia de datos. Desarrollo freelance de sitios y plataformas web en WordPress, desde la maquetación hasta el despliegue, con optimización WPO y buenas prácticas de SEO. Formación continua mediante certificaciones en React y TypeScript, incorporando herramientas y agentes de IA para optimizar el flujo de desarrollo y pruebas de código.",
   },
   {
     company: "CORFO",
