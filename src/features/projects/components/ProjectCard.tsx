@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL
 
 export function ProjectCard({ title, description, image, tags, links }: Project) {
   return (
-    <Card className="overflow-hidden pt-0">
+    <Card className="overflow-hidden border-border pt-0 transition-[border-color] hover:border-magenta motion-reduce:transition-none">
       <img
         src={base + image.src}
         alt={image.alt}

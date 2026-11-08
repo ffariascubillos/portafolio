@@ -1,13 +1,9 @@
-import { act, render, screen } from '@testing-library/react'
-import { afterEach, describe, expect, it, vi } from 'vitest'
-import { mockIntersectionObserver, mockMatchMedia } from '@/test/mocks'
+import { render, screen } from '@testing-library/react'
+import { describe, expect, it } from 'vitest'
 import { Section } from './Section'
-
-afterEach(() => vi.unstubAllGlobals())
 
 describe('Section', () => {
   it('renders an accessible section labelled by its title, with children', () => {
-    mockMatchMedia(true)
     render(
       <Section id="about" title="Sobre mí">
         <p>contenido</p>
@@ -19,19 +15,11 @@ describe('Section', () => {
     expect(screen.getByText('contenido')).toBeInTheDocument()
   })
 
-  it('is hidden until visible, then shown', () => {
-    mockMatchMedia(false)
-    const IO = mockIntersectionObserver()
+  it('is visible without IntersectionObserver', () => {
+    expect('IntersectionObserver' in globalThis).toBe(false)
     render(<Section id="x" title="T">c</Section>)
     const region = screen.getByRole('region', { name: 'T' })
-    expect(region).toHaveClass('opacity-0')
-    act(() => IO.instances[0].trigger(true))
-    expect(region).toHaveClass('opacity-100')
-  })
-
-  it('is visible immediately with reduced motion', () => {
-    mockMatchMedia(true)
-    render(<Section id="x" title="T">c</Section>)
-    expect(screen.getByRole('region', { name: 'T' })).toHaveClass('opacity-100')
+    expect(region).not.toHaveClass('opacity-0')
+    expect(region).not.toHaveClass('translate-y-6')
   })
 })

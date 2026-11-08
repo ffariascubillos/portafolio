@@ -1,16 +1,25 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/shared/components/ui/card"
 import { TagList } from "@/shared/components/TagList"
+import { cn } from "@/lib/utils"
 import type { Experience } from "../data"
 
-export function ExperienceCard({ company, role, period, description, clients, tags }: Experience) {
+type Props = Experience & { current?: boolean }
+
+export function ExperienceCard({ company, role, period, description, clients, tags, current }: Props) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-xl">{company}</CardTitle>
-        {role && <p className="font-medium">{role}</p>}
-        <p className="text-sm opacity-80">{period}</p>
-      </CardHeader>
-      <CardContent className="space-y-4">
+    <li className="relative pl-8">
+      <span
+        aria-hidden="true"
+        className={cn(
+          "absolute top-2 -left-[8px] size-3.5 rotate-45 border-2 border-primary",
+          current ? "bg-primary" : "bg-background",
+        )}
+      />
+      <article className="space-y-3">
+        <header className="space-y-1">
+          <h3 className="text-xl font-semibold">{company}</h3>
+          {role && <p className="font-medium">{role}</p>}
+          <p className="text-sm text-muted-foreground">{period}</p>
+        </header>
         <p className="text-sm leading-relaxed">{description}</p>
         {clients && (
           <p className="text-sm">
@@ -23,7 +32,7 @@ export function ExperienceCard({ company, role, period, description, clients, ta
             <TagList tags={tags} />
           </>
         )}
-      </CardContent>
-    </Card>
+      </article>
+    </li>
   )
 }

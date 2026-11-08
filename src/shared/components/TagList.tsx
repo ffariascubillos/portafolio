@@ -1,8 +1,8 @@
 import { Badge } from "@/shared/components/ui/badge"
 
-export function TagList({ tags }: { tags: string[] }) {
+export function TagList({ tags, label, className }: { tags: string[]; label?: string; className?: string }) {
   return (
-    <ul className="flex flex-wrap gap-2">
+    <ul aria-label={label} className={className ?? "flex flex-wrap gap-2"}>
       {tags.map((tag) => (
         <li key={tag}>
           <Badge variant="secondary">{tag}</Badge>
