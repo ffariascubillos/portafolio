@@ -25,7 +25,7 @@ export function Header() {
         onClick={onClick}
         aria-current={active === id ? "page" : undefined}
         className={cn(
-          "text-text/70 transition-colors hover:text-text aria-[current=page]:text-text aria-[current=page]:font-semibold",
+          "text-muted-foreground transition-colors hover:text-text aria-[current=page]:font-semibold aria-[current=page]:text-primary aria-[current=page]:underline aria-[current=page]:decoration-2 aria-[current=page]:underline-offset-8",
           className,
         )}
       >
@@ -36,7 +36,7 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-        <a href="#sobre-mi" className="font-semibold text-text">
+        <a href="#sobre-mi" className="font-display font-semibold text-text">
           Felipe Farías
         </a>
         <nav aria-label="Navegacion principal" className="hidden gap-6 md:flex">

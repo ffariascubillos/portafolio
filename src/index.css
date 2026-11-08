@@ -1,30 +1,39 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/*
+ * Identidad neon/cyberpunk híbrida (spec visual-identity).
+ * night #0D0B1F fondo · panel #17142E superficies · line #2C2752 bordes
+ * ink #E8ECF8 lectura · dim #8A90B4 secundario
+ * cyan #00E5FF señal (interactivo en reposo) · magenta #FF2E88 respuesta (hover/activo)
+ */
 @theme {
-  --color-background: #0f172a;
-  --color-surface: #1e293b;
-  --color-text: #fff;
-  --color-border: rgb(255 255 255 / 0.15);
-  --color-foreground: #fff;
-  --color-card: #1e293b;
-  --color-card-foreground: #fff;
-  --color-popover: #1e293b;
-  --color-popover-foreground: #fff;
-  --color-primary: #38bdf8;
-  --color-primary-foreground: #0f172a;
-  --color-secondary: #334155;
-  --color-secondary-foreground: #f1f5f9;
-  --color-muted: #334155;
-  --color-muted-foreground: #94a3b8;
-  --color-accent: #334155;
-  --color-accent-foreground: #fff;
+  --color-background: #0d0b1f;
+  --color-surface: #17142e;
+  --color-text: #e8ecf8;
+  --color-border: #2c2752;
+  --color-foreground: #e8ecf8;
+  --color-card: #17142e;
+  --color-card-foreground: #e8ecf8;
+  --color-popover: #17142e;
+  --color-popover-foreground: #e8ecf8;
+  --color-primary: #00e5ff;
+  --color-primary-foreground: #0d0b1f;
+  --color-secondary: #17142e;
+  --color-secondary-foreground: #e8ecf8;
+  --color-muted: #2c2752;
+  --color-muted-foreground: #8a90b4;
+  --color-accent: #2c2752;
+  --color-accent-foreground: #e8ecf8;
   --color-destructive: #ef4444;
-  --color-input: rgb(255 255 255 / 0.25);
-  --color-ring: #38bdf8;
-  --radius-card: 16px;
-  --radius-button: 5px;
-  --font-sans: "Inter", sans-serif;
+  --color-input: #2c2752;
+  --color-ring: #00e5ff;
+  --color-magenta: #ff2e88;
+  --radius-card: 2px;
+  --radius-button: 0px;
+  --font-display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-sans: var(--font-body);
 }
 
 @layer base {
@@ -33,5 +42,48 @@
   }
   body {
     @apply bg-background font-sans text-text overflow-x-hidden;
+  }
+  h1,
+  h2,
+  h3,
+  button,
+  nav,
+  [data-slot="button"] {
+    font-family: var(--font-display);
+  }
+  p {
+    text-shadow: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 3px;
+  }
+}
+
+/* Encendido del nombre: única animación automática (spec hero-profile). */
+@keyframes neon-on {
+  0% { color: transparent; -webkit-text-stroke: 1px var(--color-magenta); text-shadow: none; }
+  30% { color: transparent; -webkit-text-stroke: 1px var(--color-magenta); text-shadow: none; }
+  36% { color: #ffe6f1; -webkit-text-stroke: 0; text-shadow: 0 0 12px var(--color-magenta); }
+  44% { color: transparent; -webkit-text-stroke: 1px var(--color-magenta); text-shadow: none; }
+  54% { color: #ffe6f1; -webkit-text-stroke: 0; text-shadow: 0 0 12px var(--color-magenta); }
+  62% { color: transparent; -webkit-text-stroke: 1px var(--color-magenta); text-shadow: none; }
+  100% { color: #ffe6f1; -webkit-text-stroke: 0; text-shadow: 0 0 8px var(--color-magenta), 0 0 22px rgb(255 46 136 / 0.6); }
+}
+
+@layer utilities {
+  .neon-name {
+    color: #ffe6f1;
+    text-shadow: 0 0 8px var(--color-magenta), 0 0 22px rgb(255 46 136 / 0.6);
+    animation: neon-on 1.6s steps(1, end) 1 both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .neon-name { animation: none; }
+  }
+  .clip-cut {
+    clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  }
+  .clip-cut-sm {
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
   }
 }

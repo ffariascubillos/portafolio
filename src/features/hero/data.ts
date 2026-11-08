@@ -8,6 +8,7 @@ export const whatsapp: Contact = {
 }
 
 export const profile = {
+  available: true,
   name: "Felipe Farías",
   role: "Desarrollador Web Full Stack",
   photo: "images/perfil.jpeg",
